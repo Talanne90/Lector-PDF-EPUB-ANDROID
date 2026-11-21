@@ -6,7 +6,7 @@
 
 ### 📦 Archivos del Release
 - **Instalador APK:** `NovelaAudioReader.apk` (13.3 MB)
-- **SHA-256:** `cad9297ca9f490f13a056a48b27b4bcef79f976f21dbae76f19238a27e221121`
+- **SHA-256:** `3a0cc708fbc070fb9900428dcc730d67a830a347a54dfc211b3c221d79231eb4`
 - **Compatibilidad:** Android 7.0 (Nougat, API 24) en adelante.
 
 ---
