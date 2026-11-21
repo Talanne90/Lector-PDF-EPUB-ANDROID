@@ -92,7 +92,7 @@ Puedes descargar el instalador oficial desde la sección de versiones de este re
 
 - 🚀 **Descargar APK (Última versión):** [**Ir a GitHub Releases (NovelaAudioReader v2.0)**](../../releases/latest) *(~164 MB, versión Release firmada con voces neuronales offline)*
 - 🔒 **Seguridad verificada (0 detecciones):** [Ver reporte oficial en VirusTotal](https://virustotal.com)  
-  `SHA-256: c40518938d52e4f98b5704cb5d216b1f2b9c6df53f68aaa1a7187d1c52e0caeb`
+  `SHA-256: dadc19d4ad6b8ad7619a244232a951e1bd39a4d72e17456bcc845a870822f09e`
 
 ### Pasos de instalación:
 1. Entra a [**Releases**](../../releases/latest) y descarga el archivo **`.apk`** en tu dispositivo Android.
