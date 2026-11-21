@@ -6,7 +6,7 @@
 
 ### 📦 Archivos del Release
 - **Instalador APK:** `NovelaAudioReader.apk` (o `NovelaAudioReader-v2.0.apk`) (~164 MB, incluye modelos ONNX y diccionarios fonéticos)
-- **SHA-256:** `dadc19d4ad6b8ad7619a244232a951e1bd39a4d72e17456bcc845a870822f09e`
+- **SHA-256:** `caaa1ff6cb93bfbc6b251a7daebfa2e234fa71eb8a1c2d4a82db6c2b19f04e10`
 - **Compatibilidad:** Android 8.0 (Oreo, API 26) hasta Android 14/15/16 (API 34+). Arquitectura `arm64-v8a` pura.
 
 ---
