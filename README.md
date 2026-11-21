@@ -59,9 +59,9 @@ A diferencia de los lectores convencionales saturados de publicidad o que pausan
 
 <div align="center">
 
-| Riel de Biblioteca y Portadas | Lector con Resaltado y Modo Baja Visión | Reproductor Persistente y Sleep Timer |
+| Riel de Biblioteca | Modo Lectura & Baja Visión | Reproductor Persistente |
 | :---: | :---: | :---: |
-| *(Agrega captura de biblioteca en `screenshots/01_biblioteca.png`)* | *(Agrega captura del lector en `screenshots/02_lector.png`)* | *(Agrega captura de controles en `screenshots/03_player.png`)* |
+| <img src="screenshots/3e27d39a-b446-492d-8416-e4bef9a775cc.jpg" width="270" alt="Riel de Biblioteca"/> | <img src="screenshots/85e76fb1-7655-4588-93e1-f6cfa4921393.jpg" width="270" alt="Lector"/> | <img src="screenshots/c4e7367d-6ddc-4e5c-a578-a9eeb3faacb2.jpg" width="270" alt="Reproductor"/> |
 
 </div>
 
