@@ -69,10 +69,16 @@ A diferencia de los lectores convencionales saturados de publicidad o que pausan
 
 ## 📥 Descarga e Instalación
 
-1. Dirígete a la sección de [Releases](https://github.com/) del repositorio.
-2. Descarga el archivo **`NovelaAudioReader.apk`**.
-3. Abre el archivo en tu dispositivo Android y concédele permiso para instalar fuentes desconocidas.
-4. Al abrir la app, selecciona la carpeta donde guardas tus novelas (PDF, EPUB o TXT) y ¡listo!
+Puedes descargar la aplicación directamente desde este repositorio:
+
+- 📦 **Descarga directa:** [**`NovelaAudioReader.apk`**](./NovelaAudioReader.apk?raw=true) *(13.3 MB, versión Release compilada y optimizada)*
+- 🚀 **O desde la pestaña de [Releases](../../releases):** Donde encontrarás las notas de versión y el instalador listo.
+
+### Pasos de instalación:
+1. Descarga el archivo **`NovelaAudioReader.apk`** en tu dispositivo Android.
+2. Abre el archivo y concédele permiso para instalar aplicaciones desde fuentes desconocidas si el sistema lo solicita.
+3. Inicia **Novela Audio Reader**, pulsa en *"Detectar Carpeta de Novelas"* y selecciona el directorio raíz de tus libros (PDF, EPUB o TXT).
+4. Elige tu novela favorita en el riel de portadas y ¡disfruta de la lectura auditiva!
 
 ---
 
