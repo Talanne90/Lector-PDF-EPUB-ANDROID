@@ -91,7 +91,7 @@ A diferencia de los lectores convencionales que pausan la voz al bloquear el tel
 Puedes descargar el instalador oficial desde la sección de versiones de este repositorio:
 
 - 🚀 **Descargar APK (Última versión):** [**Ir a GitHub Releases (NovelaAudioReader v1.0)**](../../releases/latest) *(~13.3 MB, versión Release firmada)*
-- 🔒 **Seguridad verificada:** [Ver reporte limpio en VirusTotal](https://virustotal.com)  
+- 🔒 **Seguridad verificada (0 detecciones):** [Ver reporte oficial en VirusTotal](https://virustotal.com)  
   `SHA-256: 5248bcc55a33a20926918b6f89d0d972e481bc5e2505ea74d1313871ecfda9b9`
 
 ### Pasos de instalación:
