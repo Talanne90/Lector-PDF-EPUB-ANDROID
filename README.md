@@ -2,15 +2,14 @@
 
 <div align="center">
 
-![Android](https://img.shields.io/badge/Platform-Android%207.0%2B%20(API%2024--35)-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Android](https://img.shields.io/badge/Platform-Android%208.0%2B%20(API%2026--34)-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 ![Format](https://img.shields.io/badge/Formats-PDF%20%7C%20EPUB%20%7C%20TXT-FF7043?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Zero--Ads-100%25%20Offline-success?style=for-the-badge)
 ![Audio](https://img.shields.io/badge/TTS-Screen--Off%20Background-9C27B0?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
 **Lector auditivo y visual de novelas ligeras, libros y literatura en formatos PDF, EPUB y TXT con síntesis de voz (TTS) ininterrumpida en segundo plano y pantalla apagada.**
 
-[Descargar APK](#-descarga-e-instalación) • [Características](#-características-principales) • [Capturas de Pantalla](#-capturas-de-pantalla) • [Novedades](#-últimas-mejoras) • [Arquitectura](#-arquitectura-técnica)
+[Descargar APK](#-descarga-e-instalación) • [Características](#-características-principales) • [Capturas de Pantalla](#-capturas-de-pantalla) • [Novedades](#-últimas-mejoras) • [Arquitectura](#-tecnologías-y-arquitectura)
 
 </div>
 
@@ -18,7 +17,7 @@
 
 ## 🌟 ¿Qué es Novela Audio Reader?
 
-**Novela Audio Reader** es un reproductor y lector offline diseñado especialmente para lectores de novelas ligeras, webnovels y libros extensos. 
+**Novela Audio Reader** es un reproductor y lector offline diseñado especialmente para lectores de novelas ligeras, webnovels y libros extensos.
 
 A diferencia de los lectores convencionales que pausan la voz al bloquear el teléfono o que saturan la experiencia con publicidad, Novela Audio Reader funciona como un reproductor multimedia dedicado: puedes guardar el dispositivo en el bolsillo o apagar la pantalla y disfrutar de una narración continua, fluida y sin silencios entre párrafos.
 
@@ -41,7 +40,7 @@ A diferencia de los lectores convencionales que pausan la voz al bloquear el tel
 ### 🖼️ Riel de Biblioteca con Portadas en Alta Definición
 - **Cabecera Funcional de 2 Filas:** Botón directo *"Pre-cargar Todos"* para procesar y cachear en lote toda una carpeta de novelas, y selector rápido de carpeta raíz.
 - **Ordenamiento Inteligente:** Clasificación alfabética por título limpio y orden ascendente por volumen (`Volumen 01`, `Volumen 02`, `Volumen 1.5`...).
-- **Portadas con Subsampling Seguro:** Detección de portadas en EPUB y PDF decodificadas en dos pasos (*2-pass inSampleSize*) hacia ~540px, garantizando miniaturas nítidas sin sobrecargar la GPU ni disparar OutOfMemory.
+- **Portadas con Subsampling Seguro:** Detección de portadas en EPUB y PDF decodificadas en dos pasos (*2-pass inSampleSize*) hacia ~540px, garantizando miniaturas nítidas sin sobrecargar la memoria.
 
 ### 👁️ Modo Baja Visión y Accesibilidad
 - **Tipografía Escalable Ampliada:** Rango de tamaño de fuente desde 12sp hasta **44sp** con ajuste fino de `±2sp`.
@@ -82,34 +81,28 @@ A diferencia de los lectores convencionales que pausan la voz al bloquear el tel
 - **Bloqueo vertical de pantalla:** Prevención de giros accidentales al cambiar de postura mientras se lee o escucha.
 - **Cabecera de biblioteca en dos filas:** Mayor legibilidad en títulos largos y acceso inmediato a pre-carga masiva.
 - **Nuevo icono oficial:** Libro estilizado con auriculares over-ear y ondas sonoras TTS, compatible con iconos adaptativos modernos.
-- **Firma permanente de producción:** Compilaciones release firmadas oficialmente para una instalación limpia y directa.
+- **Firma permanente de producción:** Compilaciones release firmadas oficialmente para futuras actualizaciones directas sin perder datos.
 
 ---
 
 ## 📥 Descarga e Instalación
 
-Puedes descargar el instalador directamente desde este repositorio:
+Puedes descargar el instalador oficial desde la sección de versiones de este repositorio:
 
-- 📦 **Descarga directa:** [**`NovelaAudioReader.apk`**](./NovelaAudioReader.apk?raw=true) *(13.3 MB, versión Release compilada y optimizada)*
-- 🚀 **O desde la sección de [Releases](../../releases):** Donde encontrarás notas de versión y enlaces de descarga.
+- 🚀 **Descargar APK (Última versión):** [**Ir a GitHub Releases (NovelaAudioReader v1.0)**](../../releases/latest) *(~13.3 MB, versión Release firmada)*
 
 ### Pasos de instalación:
-1. Descarga el archivo **`NovelaAudioReader.apk`** en tu dispositivo Android.
-2. Abre el archivo y concédele permiso para instalar fuentes desconocidas si el sistema lo solicita.
-3. Inicia **Novela Audio Reader**, pulsa en *"Detectar Carpeta de Novelas"* y selecciona el directorio donde guardas tus archivos PDF, EPUB o TXT.
-4. Elige tu novela favorita en el riel de portadas y ¡comienza tu lectura!
+1. Entra a [**Releases**](../../releases/latest) y descarga el archivo **`.apk`** en tu dispositivo Android.
+2. Ábrelo para instalar *(Nota: al ser una app independiente fuera de Play Store, si Google Play Protect muestra un aviso preventivo, toca en **"Más detalles" -> "Instalar de todas formas"**)*.
+3. Al abrir **Novela Audio Reader** por primera vez, acepta el permiso de **batería sin restricciones** para garantizar que Android nunca detenga la voz con la pantalla apagada.
+4. Pulsa en *"Detectar Carpeta de Novelas"* y selecciona la carpeta donde guardas tus archivos PDF, EPUB o TXT.
+5. Elige tu novela en el riel de portadas y ¡disfruta la lectura!
 
 ---
 
 ## 🛠️ Tecnologías y Arquitectura
 
-- **Lenguaje:** Java 17 puro para Android (soporta desde Android 7.0 / API 24 hasta Android 15 / API 35).
-- **Motor de Audio:** `android.speech.tts.TextToSpeech` integrado con `MediaSessionCompat` y `ForegroundService`.
-- **Procesamiento de Archivos:** `PdfRenderer`, `java.util.zip.ZipFile`, `XmlPullParser`, streaming con `android.util.JsonReader`.
-- **UI:** Material Components Android, `RecyclerView` horizontal con `PagerSnapHelper`, arquitectura Anti-Descuadre y Zero-GC en tareas de fondo.
-
----
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia **MIT**. Consulta el archivo `LICENSE` para más información.
+- **Lenguaje:** Java 17 nativo para Android (compatible desde Android 8.0 / API 26 hasta Android 14+ / API 34).
+- **Motor de Audio:** `android.speech.tts.TextToSpeech` integrado con `MediaSessionCompat`, `ForegroundService` y keep-alive de audio en segundo plano.
+- **Procesamiento de Archivos:** `PDFBox-Android`, `PdfRenderer`, `java.util.zip.ZipFile`, `XmlPullParser` y lectura de metadatos en streaming con `android.util.JsonReader`.
+- **Interfaz:** Material Components Android y `RecyclerView` horizontal con `PagerSnapHelper`.
