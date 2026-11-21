@@ -6,10 +6,11 @@
 ![Format](https://img.shields.io/badge/Formats-PDF%20%7C%20EPUB%20%7C%20TXT-FF7043?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Zero--Ads-100%25%20Offline-success?style=for-the-badge)
 ![Audio](https://img.shields.io/badge/TTS-Screen--Off%20Background-9C27B0?style=for-the-badge)
+![AI](https://img.shields.io/badge/Built%20with-AI%20Agents-7C4DFF?style=for-the-badge)
 
 **Lector auditivo y visual de novelas ligeras, libros y literatura en formatos PDF, EPUB y TXT con síntesis de voz (TTS) ininterrumpida en segundo plano y pantalla apagada.**
 
-[Descargar APK](#-descarga-e-instalación) • [Características](#-características-principales) • [Capturas de Pantalla](#-capturas-de-pantalla) • [Novedades](#-últimas-mejoras) • [Arquitectura](#-tecnologías-y-arquitectura)
+[Descargar APK](#-descarga-e-instalación) • [Características](#-características-principales) • [Capturas de Pantalla](#-capturas-de-pantalla) • [Novedades](#-últimas-mejoras) • [Arquitectura](#-tecnologías-y-arquitectura) • [Transparencia](#-transparencia--desarrollo-asistido-por-ia)
 
 </div>
 
@@ -90,6 +91,8 @@ A diferencia de los lectores convencionales que pausan la voz al bloquear el tel
 Puedes descargar el instalador oficial desde la sección de versiones de este repositorio:
 
 - 🚀 **Descargar APK (Última versión):** [**Ir a GitHub Releases (NovelaAudioReader v1.0)**](../../releases/latest) *(~13.3 MB, versión Release firmada)*
+- 🔒 **Seguridad verificada:** [Ver reporte limpio en VirusTotal](https://virustotal.com)  
+  `SHA-256: 3a0cc708fbc070fb9900428dcc730d67a830a347a54dfc211b3c221d79231eb4`
 
 ### Pasos de instalación:
 1. Entra a [**Releases**](../../releases/latest) y descarga el archivo **`.apk`** en tu dispositivo Android.
@@ -106,3 +109,12 @@ Puedes descargar el instalador oficial desde la sección de versiones de este re
 - **Motor de Audio:** `android.speech.tts.TextToSpeech` integrado con `MediaSessionCompat`, `ForegroundService` y keep-alive de audio en segundo plano.
 - **Procesamiento de Archivos:** `PDFBox-Android`, `PdfRenderer`, `java.util.zip.ZipFile`, `XmlPullParser` y lectura de metadatos en streaming con `android.util.JsonReader`.
 - **Interfaz:** Material Components Android y `RecyclerView` horizontal con `PagerSnapHelper`.
+
+---
+
+## 🤖 Transparencia & Desarrollo Asistido por IA
+
+Este proyecto fue desarrollado y optimizado íntegramente mediante **programación en pareja con Agentes de Inteligencia Artificial (AI Pair Programming)**:
+
+- **Ingeniería Asistida:** Todo el código fuente, la arquitectura Zero-GC y los pipelines de extracción de audio y documentos fueron conceptualizados, estructurados y refinados utilizando agentes de IA bajo rigurosa supervisión, testing y dirección humana.
+- **Transparencia Total:** Creemos en la honestidad del desarrollo de software moderno. La IA actuó como un multiplicador técnico para crear una aplicación nativa limpia, sin dependencias comerciales pesadas, sin rastreadores y 100% enfocada en la privacidad del usuario.
