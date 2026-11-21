@@ -90,9 +90,9 @@ A diferencia de los lectores convencionales que pausan la voz al bloquear el tel
 
 Puedes descargar el instalador oficial desde la sección de versiones de este repositorio:
 
-- 🚀 **Descargar APK (Última versión):** [**Ir a GitHub Releases (NovelaAudioReader v1.0)**](../../releases/latest) *(~13.3 MB, versión Release firmada)*
+- 🚀 **Descargar APK (Última versión):** [**Ir a GitHub Releases (NovelaAudioReader v2.0)**](../../releases/latest) *(~164 MB, versión Release firmada con voces neuronales offline)*
 - 🔒 **Seguridad verificada (0 detecciones):** [Ver reporte oficial en VirusTotal](https://virustotal.com)  
-  `SHA-256: 5248bcc55a33a20926918b6f89d0d972e481bc5e2505ea74d1313871ecfda9b9`
+  `SHA-256: c40518938d52e4f98b5704cb5d216b1f2b9c6df53f68aaa1a7187d1c52e0caeb`
 
 ### Pasos de instalación:
 1. Entra a [**Releases**](../../releases/latest) y descarga el archivo **`.apk`** en tu dispositivo Android.

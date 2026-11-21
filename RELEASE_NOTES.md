@@ -1,38 +1,39 @@
-# 🚀 Novela Audio Reader v1.0.0 — Lanzamiento Inicial
+# 🚀 Novela Audio Reader v2.0.0 — Motor TTS Neuronal ONNX Offline (Claudia & Aldo México)
 
-¡Bienvenido al lanzamiento oficial de **Novela Audio Reader**! Un reproductor y lector de novelas ligeras y libros offline diseñado para escuchar tus historias sin interrupciones con la pantalla apagada.
+¡Bienvenido al lanzamiento de **Novela Audio Reader v2.0**! Una actualización mayor que transforma la experiencia auditiva incorporando voces neuronales de alta fidelidad **100% offline y privadas** sin depender de los motores robóticos del sistema.
 
 ---
 
 ### 📦 Archivos del Release
-- **Instalador APK:** `NovelaAudioReader.apk` (13.3 MB)
-- **SHA-256:** `5248bcc55a33a20926918b6f89d0d972e481bc5e2505ea74d1313871ecfda9b9`
-- **Compatibilidad:** Android 7.0 (Nougat, API 24) en adelante.
+- **Instalador APK:** `NovelaAudioReader.apk` (o `NovelaAudioReader-v2.0.apk`) (~164 MB, incluye modelos ONNX y diccionarios fonéticos)
+- **SHA-256:** `c40518938d52e4f98b5704cb5d216b1f2b9c6df53f68aaa1a7187d1c52e0caeb`
+- **Compatibilidad:** Android 8.0 (Oreo, API 26) hasta Android 14/15/16 (API 34+). Arquitectura `arm64-v8a` pura.
 
 ---
 
-### 🌟 Novedades y Características
+### 🌟 Novedades de la Versión 2.0
 
-#### 🎧 Reproducción y TTS Continuo
-- **Pantalla apagada y segundo plano:** Foreground Service nativo con `WakeLock` parcial y controles multimedia integrados en la pantalla de bloqueo y barra de notificaciones (`MediaSessionCompat`).
-- **Pre-encolado inteligente (Zero-Silence):** El motor sintetiza el fragmento siguiente antes de que culmine el actual, eliminando vacíos de audio entre párrafos.
-- **Selector de velocidad en vivo:** Cambios de velocidad (0.75x a 2.0x) reflejados al instante.
+#### 🧠 Motor Dual TTS Neuronal ONNX Offline (Piper VITS + sherpa-onnx)
+- **Voces Mexicanas de Estudio Integradas:**
+  * **✨ Claudia (Femenina):** Narración fluida, expresiva y natural en Español de México (`es_MX-claude-high`). Activa por defecto.
+  * **✨ Aldo (Masculina):** Tono sobrio, balanceado y claro (`es_MX-ald-medium`).
+- **Respaldo Híbrido:** Si lo deseas, puedes alternar en cualquier momento hacia las voces de tu motor nativo del sistema Android (`TextToSpeech`).
 
-#### 📖 Compatibilidad Multiformato
-- **PDF:** Renderizado vectorial y extracción rápida sin desbordar memoria.
-- **EPUB:** Extractor nativo por streaming con `ZipFile`, eliminación de artefactos XHTML y limpieza de `[OBJ]` en ilustraciones. Subsampling en portadas para proteger la memoria ante imágenes de alta resolución.
-- **TXT:** Detección automática UTF-8 / Windows-1252 / ISO-8859-1 para preservar acentos y la letra `ñ`.
-- **Preservación de diálogos:** Respeta las rayas de diálogo en español (`—` y `–`) para mantener la entonación literaria.
+#### ⚡ Arquitectura Productor-Consumidor "Zero-Silence" con Pausa Inmediata
+- **Doble Buffer en Memoria:** Mientras el fragmento actual suena en el consumidor `AudioTrack` (PCM 16-bit a 22.05 kHz), el hilo productor sintetiza por anticipado el párrafo siguiente. Cero vacíos ni baches sonoros entre oraciones.
+- **Pausa y Salto Sub-milisegundo:** Al pulsar pausa o cambiar de fragmento, el buffer de hardware se vacía al instante (`pause()` + `flush()`) sin colas residuales ni latencias molestas.
 
-#### 👁️ Accesibilidad y Modo Baja Visión
-- **Tipografía escalable:** Desde 12sp hasta **44sp** con pasos de `±2sp`.
-- **Resaltado de párrafo activo:** Contraste cyan sobre fondo oscuro.
-- **Botón flotante "Volver a la voz":** Regreso instantáneo al párrafo que está sonando si te desplazas manualmente.
-- **Anti-toques accidentales:** Salto manual de audio únicamente mediante **doble toque** con respuesta háptica.
+#### 🔋 Ahorro de Recursos: Smart 30-Minute Auto-Kill en Pausa
+- Al dejar la lectura en pausa por más de 30 minutos, la app salva atómicamente el progreso exacto, libera completamente la memoria nativa de los modelos ONNX (`release()`), apaga el `ForegroundService` y se auto-cierra para cuidar la batería y la RAM de tu teléfono.
 
-#### ⏱️ Temporizador de Apagado (Sleep Timer)
-- Apagado automático configurable: **15, 30, 45 o 60 minutos**, o por conteo de fragmentos leídos. Notificación en vivo en el reproductor.
+#### 🛡️ Blindaje de Progreso Atómico
+- Cada avance de fragmento, salto manual o pausa guarda instantáneamente la posición tanto en la sesión activa como en el índice persistente de la biblioteca para cada libro individual.
 
-#### 🖼️ Riel de Portadas
-- Detección automática en almacenamiento local con ordenamiento alfabético y por volúmenes (`Volumen 01`, `02`, `1.5`, etc.).
-- 100% offline, sin publicidad, sin rastreadores y sin compras integradas.
+---
+
+### 🛠️ Características Clásicas Mantenidas
+- **Lectura con Pantalla Apagada:** Reproducción continua en segundo plano con `WakeLock` parcial y controles multimedia en pantalla de bloqueo y barra de notificaciones (`MediaSessionCompat`).
+- **Multiformato:** Soporte para PDF, EPUB y TXT con extracción nativa ultra ligera.
+- **Modo Baja Visión:** Tipografía escalable hasta 44sp con alto contraste cyan y anti-toques involuntarios (doble toque para saltar).
+- **Temporizador de Apagado (Sleep Timer):** 15, 30, 45, 60 minutos o conteo de fragmentos.
+- **Privacidad Total:** 100% offline, sin publicidad, sin telemetría ni rastreadores.
